@@ -1,0 +1,19 @@
+{
+  "name": "vue-diction",
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "unpkg": "dist/index.umd.min.js",
+  "jsdelivr": "dist/index.umd.min.js",
+  "scripts": {
+    "start": "docsify serve docs",
+    "build": "father-build",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "docsify": "^4.12.1",
+    "father-build": "^1.21.1",
+    "prettier": "^2.5.1"
+  }
+}
