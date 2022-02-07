@@ -1,6 +1,9 @@
+
 Inspire by https://github.com/meetDeveloper/freeDictionaryAPI
 
 ## Example
+
+<div v-if="false">See <a href="https://chiaweilee.github.io/vue-diction/">https://chiaweilee.github.io/vue-diction/</a></div>
 
 <button><vue-diction word="hello"></vue-diction></button>
 
