@@ -17,9 +17,17 @@ Inspire by https://github.com/meetDeveloper/freeDictionaryAPI
 
 <vue-diction word="world" :show-origin="false" :show-meanings="false"></vue-diction>
 
+```vue
+<vue-diction word="world" :show-origin="false" :show-meanings="false"></vue-diction>
+```
+
 ### Special Language
 
 <vue-diction word="salut" language-code="fr"></vue-diction>
+
+```vue
+<vue-diction word="salut" language-code="fr"></vue-diction>
+```
 
 ## Usage
 
