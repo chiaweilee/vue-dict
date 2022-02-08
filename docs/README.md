@@ -38,6 +38,7 @@ import VueDiction from 'vue-diction';
 example of docsify
 
 ```html
+<script src="//cdn.jsdelivr.net/npm/vue-diction"></script>
 <script>
   window.$docsify = {
     vueComponents: {
