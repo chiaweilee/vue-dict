@@ -38,7 +38,7 @@ import VueDiction from 'vue-diction';
 example of docsify
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/vue-diction"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-diction@0.2"></script>
 <script>
   window.$docsify = {
     vueComponents: {
@@ -46,7 +46,6 @@ example of docsify
     }
   };
 </script>
-<script src="//cdn.jsdelivr.net/npm/vue-diction@0.2"></script>
 <script src="//cdn.jsdelivr.net/npm/vue@2/dist/vue.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
 ```
