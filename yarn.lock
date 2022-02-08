@@ -2532,6 +2532,11 @@ dir-glob@^3.0.1:
   dependencies:
     path-type "^4.0.0"
 
+docsify-mega-dict@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/docsify-mega-dict/-/docsify-mega-dict-0.1.1.tgz#199f41ff7b263ebd240d3fde5b0000afd5886d0c"
+  integrity sha512-GoFMLQMgmr2kmjwjX8IbLK62ZCXl5+TWpIyM13FCaWxxw9TiEgR7CnG6qSLObrWbZqJIDGuDnURN538jaxYmOQ==
+
 docsify@^4.12.1:
   version "4.12.2"
   resolved "https://registry.npmjs.org/docsify/-/docsify-4.12.2.tgz#749115d2ff7d358780ea865e01f4a0162423d67f"

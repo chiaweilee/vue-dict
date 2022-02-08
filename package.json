@@ -1,11 +1,12 @@
 {
   "name": "vue-diction",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "unpkg": "dist/index.umd.min.js",
   "jsdelivr": "dist/index.umd.min.js",
   "scripts": {
+    "dev": "npm run build && cp -r dist/index.umd.min.js docs/index.umd.min.js",
     "start": "docsify serve docs",
     "build": "father-build",
     "prepublishOnly": "npm run build"
