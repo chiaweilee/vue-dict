@@ -11,6 +11,7 @@ Inspire by https://github.com/meetDeveloper/freeDictionaryAPI
 
 ## Example
 
+<vue-diction></vue-diction>
 <vue-diction word="hello"></vue-diction>
 
 ### Autoload
@@ -50,7 +51,7 @@ import VueDiction from 'vue-diction';
 example of docsify
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/vue-diction@0.3"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-diction@0.3.1"></script>
 <script>
   window.$docsify = {
     vueComponents: {

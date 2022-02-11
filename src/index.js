@@ -44,7 +44,10 @@ const createComponent = function (props) {
       </div>
     </div>`,
     props: {
-      word: String,
+      word: {
+        type: String,
+        default: inheritProps.word,
+      },
       version: {
         type: Number,
         default: inheritProps.version,
