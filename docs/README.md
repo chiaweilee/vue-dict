@@ -13,6 +13,10 @@ Inspire by https://github.com/meetDeveloper/freeDictionaryAPI
 
 <vue-diction word="hello"></vue-diction>
 
+### Autoload
+
+<vue-diction word="world" auto-load></vue-diction>
+
 ### Without Origin and Menanings
 
 <vue-diction word="world" :show-origin="false" :show-meanings="false"></vue-diction>
@@ -46,7 +50,7 @@ import VueDiction from 'vue-diction';
 example of docsify
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/vue-diction@0.2"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-diction@0.3"></script>
 <script>
   window.$docsify = {
     vueComponents: {
@@ -60,11 +64,22 @@ example of docsify
 
 ### Props
 
-- **version**, Number, default to `2`
-- **language-code**, String, default to `en_GB`
-- **show-origin**, Boolean, default to `true`
-- **show-meanings**, Boolean, default to `true`
+|Prop|Type|Default|Description|
+|:----------:|:----------:|:----------:|:----------:|
+|version|Number|2||
+|language-code|String|'en_GB'|'en_US', 'hi', 'es', 'fr', 'ja', 'ru', 'en_GB', 'de', 'it', 'ko', 'pt-BR', 'ar', 'tr'|
+|show-origin|Boolean|true||
+|show-meanings|Boolean|true||
+|auto-loading|Boolean|false||
 
-#### LanguagesCodes
+### Extend
 
-'en_US', 'hi', 'es', 'fr', 'ja', 'ru', 'en_GB', 'de', 'it', 'ko', 'pt-BR', 'ar', 'tr'
+```
+<script>
+  window.$docsify = {
+    vueComponents: {
+      'vue-diction': window.vueDictionExtend({ autoLoad: true }),
+    }
+  };
+</script>
+```
