@@ -11,7 +11,6 @@ Inspire by https://github.com/meetDeveloper/freeDictionaryAPI
 
 ## Example
 
-<vue-diction></vue-diction>
 <vue-diction word="hello"></vue-diction>
 
 ### Autoload

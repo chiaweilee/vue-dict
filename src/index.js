@@ -103,7 +103,9 @@ const createComponent = function (props) {
                 const { audio, text } = phonetics[0];
                 if (typeof audio === 'string') {
                   this.audio = audio;
-                  this.play();
+                  if (!this.autoLoad) {
+                    this.play();
+                  }
                 }
                 if (typeof text === 'string' && text) {
                   this.symbol = text;
@@ -151,6 +153,7 @@ const createComponent = function (props) {
         ).then((res) => res.json());
       },
       play: function () {
+        if (!this.audio) return;
         const player = document.createElement('audio');
         const source = document.createElement('source');
         source.src = this.audio;
