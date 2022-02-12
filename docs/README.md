@@ -50,7 +50,7 @@ import VueDiction from 'vue-diction';
 example of docsify
 
 ```html
-<script src="//cdn.jsdelivr.net/npm/vue-diction@0.3.1"></script>
+<script src="//cdn.jsdelivr.net/npm/vue-diction@0.3.2"></script>
 <script>
   window.$docsify = {
     vueComponents: {
