@@ -1,6 +1,6 @@
 {
   "name": "vue-diction",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "unpkg": "dist/index.umd.min.js",
