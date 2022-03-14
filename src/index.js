@@ -42,6 +42,7 @@ const createComponent = function (props) {
         <span class="vue-diction-label">[origin]</span>
         <span>{{ origin }}</span>
       </div>
+      <slot></slot>
     </div>`,
     props: {
       word: {

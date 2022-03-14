@@ -13,6 +13,10 @@ Inspire by https://github.com/meetDeveloper/freeDictionaryAPI
 
 <vue-diction word="hello"></vue-diction>
 
+### Slot
+
+<vue-diction word="hello">World!</vue-diction>
+
 ### Autoload
 
 <vue-diction word="world" auto-load></vue-diction>
