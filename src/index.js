@@ -9,41 +9,43 @@ const defaultProps = {
   autoLoad: false,
 };
 
-const createComponent = function (props) {
+const defaultTemplate = `<div class="vue-diction-wrapper" v-on:click="load">
+<div class="vue-diction-word" v-on:click="play">
+  {{ word }}
+  <span v-if="!loaded && !loading" class="vue-diction-icon">
+    ${icons.dict}
+  </span>
+  <span v-if="!loaded && loading" class="vue-diction-icon">
+    ${icons.loading}
+  </span>
+  <span class="vue-diction-symbol" v-if="symbol">[{{ symbol }}]</span>
+  <span v-if="audio" class="vue-diction-icon">
+    ${icons.play}
+  </span>
+</div>
+<div v-if="meanings.length" class="vue-diction-meanings">
+  <div v-for="meaning in meanings" :key="JSON.stringify(meaning.definitions)" class="vue-diction-meaning">
+    <div class="vue-diction-part-of-speech">{{ meaning.partOfSpeech }}.</div>
+    <div class="vue-diction-definition" v-for="definition in meaning.definitions">
+      {{ definition.definition }}
+      <div class="vue-diction-example">
+        <span class="vue-diction-label">[example]</span>
+        <span>{{ definition.example }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div v-if="origin" class="vue-diction-origin">
+  <span class="vue-diction-label">[origin]</span>
+  <span>{{ origin }}</span>
+</div>
+<slot></slot>
+</div>`;
+
+const createComponent = function (props, render = (_, t) => t) {
   const inheritProps = Object.assign(defaultProps, props || {});
   return {
-    template: `<div class="vue-diction-wrapper" v-on:click="load">
-      <div class="vue-diction-word" v-on:click="play">
-        {{ word }}
-        <span v-if="!loaded && !loading" class="vue-diction-icon">
-          ${icons.dict}
-        </span>
-        <span v-if="!loaded && loading" class="vue-diction-icon">
-          ${icons.loading}
-        </span>
-        <span class="vue-diction-symbol" v-if="symbol">[{{ symbol }}]</span>
-        <span v-if="audio" class="vue-diction-icon">
-          ${icons.play}
-        </span>
-      </div>
-      <div v-if="meanings.length" class="vue-diction-meanings">
-        <div v-for="meaning in meanings" :key="JSON.stringify(meaning.definitions)" class="vue-diction-meaning">
-          <div class="vue-diction-part-of-speech">{{ meaning.partOfSpeech }}.</div>
-          <div class="vue-diction-definition" v-for="definition in meaning.definitions">
-            {{ definition.definition }}
-            <div class="vue-diction-example">
-              <span class="vue-diction-label">[example]</span>
-              <span>{{ definition.example }}</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div v-if="origin" class="vue-diction-origin">
-        <span class="vue-diction-label">[origin]</span>
-        <span>{{ origin }}</span>
-      </div>
-      <slot></slot>
-    </div>`,
+    template: render(props, defaultTemplate),
     props: {
       word: {
         type: String,
