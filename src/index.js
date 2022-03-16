@@ -42,10 +42,10 @@ const defaultTemplate = `<div class="vue-diction-wrapper" v-on:click="load">
 <slot></slot>
 </div>`;
 
-const createComponent = function (props, render = (_, t) => t) {
-  const inheritProps = Object.assign(defaultProps, props || {});
+const createComponent = function (_inheritProps, _template = defaultTemplate) {
+  const inheritProps = Object.assign(defaultProps, _inheritProps || {});
   return {
-    template: render(props, defaultTemplate),
+    template: _template,
     props: {
       word: {
         type: String,
