@@ -39,7 +39,7 @@ const defaultTemplate = `<div class="vue-diction-wrapper" v-on:click="load">
   <span class="vue-diction-label">[origin]</span>
   <span>{{ origin }}</span>
 </div>
-<slot></slot>
+<span class="vue-diction-slot"><slot></slot></span>
 </div>`;
 
 const createComponent = function (_inheritProps, _template = defaultTemplate) {
